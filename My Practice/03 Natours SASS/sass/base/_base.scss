@@ -1,0 +1,16 @@
+ 
+*, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  /* font-size:10px; */
+  /* We set the webpage font-size to 10px for easy calculations */
+  /* as 1rem === 10px */
+  /* set font-size to 62.5% which is (10px/16px)*100% = 62.5% */
+  /* We did that to allow the use to change the font size of the webpage if he wants */
+  font-size: 62.5%;   
+}
+

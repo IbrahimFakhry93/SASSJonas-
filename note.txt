@@ -1,0 +1,5 @@
+git init
+
+ git config --global user.name "Ibrahim"
+ git config --global user.email "ibrahim.fakhry93@yahoo.com"
+ git remote add origin https://github.com/IbrahimFakhry93/SASSJonas-.git
