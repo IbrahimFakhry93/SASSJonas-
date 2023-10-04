@@ -1,3 +1,9 @@
+.grid-test {
+  margin: 100px;
+  font-size: 2.5rem;
+  // background-color: blue;
+}
+
 .row {
   max-width: $grid-width;
   margin: 0 auto;
@@ -10,12 +16,7 @@
 
   @include clearfix;
 
-  .col-1-of-2 {
-    width: calc((100% - #{$gutter-horizontal}) / 2);  //* Don't forget the spaces before and after the ( - )
-  
-  }
-  
-  [class ^= "col-"]{
+  [class^="col-"] {
     background-color: orangered;
     float: left;
 
@@ -24,25 +25,39 @@
     }
   }
 
+  .col-1-of-2 {
+    width: calc(
+      (100% - #{$gutter-horizontal}) / 2
+    ); //* Don't forget the spaces before and after the ( - )
+  }
+
   .col-1-of-3 {
-    width: calc((100% - 2*#{$gutter-horizontal}) / 3);  //* Don't forget the spaces before and after the ( - )
+    width: calc(
+      (100% - 2 * #{$gutter-horizontal}) / 3
+    ); //* Don't forget the spaces before and after the ( - )
   }
 
-  .col-2-of-3{
-    width: calc(2 * ((100% - 2*#{$gutter-horizontal}) / 3) + #{$gutter-horizontal});  //* Don't forget the spaces before and after the ( - ) snd (+)
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    ); //* Don't forget the spaces before and after the ( - ) snd (+)
   }
 
-  .col-1-of-4{
-    width: calc((100% - 3*#{$gutter-horizontal}) / 4);  //* Don't forget the spaces before and after the ( - )
+  .col-1-of-4 {
+    width: calc(
+      (100% - 3 * #{$gutter-horizontal}) / 4
+    ); //* Don't forget the spaces before and after the ( - )
   }
 
-  .col-2-of-4{
-    width: calc(2 * ((100% - 3*#{$gutter-horizontal}) / 4) + #{$gutter-horizontal});  //* Don't forget the spaces before and after the ( - )
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    ); //* Don't forget the spaces before and after the ( - )
   }
 
-  .col-3-of-4{
-    width: calc(3 * ((100% - 3*#{$gutter-horizontal}) / 4) + 2*#{$gutter-horizontal});  //* Don't forget the spaces before and after the ( - )
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 *#{$gutter-horizontal}
+    ); //* Don't forget the spaces before and after the ( - )
   }
-
-
 }

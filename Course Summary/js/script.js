@@ -1,6 +1,3 @@
-
-
-
 //* Normalize CSS in order to make a cross browser reset.
 //* in order to make every browser render the page in the exact same way.
 
@@ -9,8 +6,6 @@
 //* and more consistent in the way that they render a website.
 
 //* And so that's no longer really necessary
-
-
 
 //*==========================================================================
 
@@ -26,7 +21,6 @@
 //?   padding: 0;
 //?   box- sizing: border - box;
 //? }
-
 
 //& Title: Set Overall font properties for the entire webpage:
 
@@ -48,9 +42,7 @@
 //   height: 95vh;
 // }
 
-
 //* ../: to go one folder up
-
 
 //* background-image: cover
 
@@ -58,26 +50,22 @@
 //* the viewport, or the element, it'll always try to fit
 //* the element inside of the box.
 
-
 //* background-position: top;
 //* make the top of the image stays the same whatever the size of viewport changes
 
-
 //? Add Opaque Layer:
 // background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-
 
 //? Clip path:
 //* We use clip path to apply wedge on the page
 //* Specify a polygon in which the image, or the element, will still be visible.
 //* We use the polygon function. So polygon. And in here we define a bunch of coordinates which define this polygon.
 
-  /* triangle clip path */
-  // clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%);  
-
+/* triangle clip path */
+// clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%);
 
 //? logo-img
-  
+
 //* add first a DIV, and then inside that DIV is where I'm gonna put an image. Because the image is actually an inline element,
 
 //* it's a better practice to first have a small container where this image is inside,
@@ -85,14 +73,12 @@
 //* and then position that container to where we want the image and the container to be.
 
 <div class="logo-box">
-<img src="./img/logo-white.png" alt="logo" class="logo"/>
-</div>
-
+  <img src="./img/logo-white.png" alt="logo" class="logo" />
+</div>;
 
 //? h1
 //* h1 is the single most important heading on the page, which is important for Google or for any other search engine
 //* to figure out what our webpage is all about. And so it's important that we basically put the title of our webpage in there.
-
 
 //? span
 //* span element is perfect for this because remember that a span is simply to style some text different.
@@ -110,9 +96,7 @@
 //   transform: translate(-50%, -50%);  //* related to child div itself
 // }
 
-
 //& Animate:
-
 
 // in each moment of time of the animation.
 
@@ -172,8 +156,35 @@
 
 // for these two properties.
 
-//*===============================================================================================================
+//~ Example
 
+// .heading-primary--sub {
+//   display: block;
+//   font-size: 2rem;
+//   font-weight: 700;
+//   letter-spacing: 1.75rem;
+//   animation: moveInLeft 1s ease-in;
+// }
+
+// @keyframes moveInRight {
+
+//   0% {
+//     opacity: 0;
+//     transform: translateX(-10rem);
+//       /* we want the element to be invisible at the beginning of the animation by applying the two properties above  */
+//   }
+
+//   80% {
+//     transform: translateX(1rem);
+//   }
+
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+}
+
+//*===============================================================================================================
 
 //& Title: Backface-visibility CSS Property
 //? Note: The backface-visibility CSS property sets whether the back face of an element is visible when turned towards the user.
@@ -184,17 +195,13 @@
 //* When set to hidden, the back face of the element is not visible, effectively making the element invisible when turned away from the user.
 //* This can be useful in creating certain visual effects, such as flipping cards or other 3D transformations.
 
-
-
 //* However, some developers have reported that setting the backface-visibility property to hidden can help reduce shaking or flickering in certain animations
-
 
 //*===============================================================================================================
 
 //& Pseudo Elements:
 
 //* Pseudo Elements is a special state of the selector
-
 
 //*=========================================================================
 
@@ -209,6 +216,8 @@
 //* The value which is to be inherited is the (computed value) not the declared value.
 //* there's a distinction between using percentages for fonts or for length or distance measurements.
 
+//*================================================================================================================
+
 //& Units
 //* When we express a length measurement in percentages, like height, a padding, a margin, or something else,
 //* the reference is always the parent element's width.
@@ -220,98 +229,66 @@
 //* So em for (fonts), the reference is the parent.
 //* em for (length), the reference is the current element.
 
+//! Interview:
+//! "Why should we actually size stuff with ems and rems if they are based on font-size? strange right?!
 
-//! you may ask:
-//! "Why should we actually size stuff
+//* to  build more request responsive layouts because just by changing font sizes,
+//* we will automatically change length since it depend on a font size and that gives us a lot of flexibility, and it's just a great technique.
 
-// with ems and rems if they are based on font-size?
-
-// It seems a bit strange, right?"
-
-// And the answer is that by doing so,
-
-// we can build more request responsive layouts
-
-// because just by changing font sizes,
-
-// we will automatically change length
-
-// since it depend on a font size and that gives us a lot
-
-// of flexibility, and it's just a great technique.
+//? example
 
 //? html{
-  /* font-size:10px; */
-  /* We set the webpage font-size to 10px for easy calculations */
-  /* as 1rem === 10px */
-  /* set font-size to 62.5% which is (10px/16px)*100% = 62.5% */
-  /* We did that to allow the use to change the font size of the webpage if he wants */
-  //* font-size: 62.5%;   
+
+//~ font-size:10px;
+//* We set the webpage font-size to 10px for easy calculations
+//* as 1rem === 10px
+//* set font-size to 62.5% which is (10px/16px)*100% = 62.5%
+//* We did that to allow the user to change the font size of the webpage if he wants
+//~ font-size: 62.5%;
+
 //? }
 
 //& vh and vw
 
-// Now finally, we have two more relative units
+//* vh and vw are relative units
 
-// but they're really simple.
+//* vh and vw are based on a browser's view port
 
-// These two are based on a browser's view port
+//* Basically one vh is just one percent of the view port
 
-// and they're called vh and vw.
+//* height and one vw is just one percent of the current view port width
 
-// Basically one vh is just one percent of the view port
+//*the browser who's painting the page knows about the view port height and width
 
-// height and one vw is just one percent of the view port width
+//* and so it does these calculations
 
-// so when we specify a height of 90 vh,
+//* when it's calculating the used values in pixels
 
-// this will simply translate to 90 percent
+//* and the same applies, of course, to vw.
 
-// of the current view port height.
-
-// Of course, in this specific example,
-
-// we don't know what the view port height is
-
-// but the browser who's painting the page knows about it
-
-// and so it does these calculations
-
-// when it's calculating the used values in pixels
-
-// and the same applies, of course, to vw.
-
-// So a width of 80 vw, for example,
-
-// is just 80 percent of the view port's width.
-
+//*================================================================================================================
 
 //& Box-model: box-sizing:
 
 //* The total width applied equals the specified width
 //* any padding or border values will be included inside the specified width.
 
+//*================================================================================================================
 
-//& Stacking Contexts
+//& Stacking Contexts (z-index)
 
-// a common misconception is that only the z index
+//! a common misconception is that (only the z index property) creates new stacking contexts,
 
-// property creates new stacking contexts,
+//! but that's not the case.
 
-// but that's not the case.
+//* An opacity value different from one,
 
-// An opacity value different from one,
+//* a transform, a filter or other properties, will also create new stacking contexts.
 
-// a transform, a filter or other properties,
+//~ That's why sometimes, even with the z index set on a positioned element,
+//* the stacking order doesn't work as expected.
 
-// will also create new stacking contexts.
-
-// That's why sometimes, even with the z index set on
-
-// a positioned element, the stacking order doesn't work
-
-// as expected.
-
+//*================================================================================================================
 
 //& CSS Architecture and BEM:
 
@@ -322,28 +299,327 @@
 //* .block__element--modifier
 //! the BEM selectors have low specifity because each selector is only one class.
 
-
-//*==================================================
+//*================================================================================================================
 
 //& Title: max-width
 
-// max-width means
+//* max-width means is that if we have enough available space,
 
-// is that if we have enough available space,
+//* then it will have the width that we specified
 
-// then it will have the width that we specified
+//! but if there is not enough width,
 
-// but if there is not enough width,
+//* so basically if the viewport is smaller than width that we specified here,
 
-// so basically if the viewport is smaller
+//~ so in this case, if the viewport is smaller than 114 rem,
 
-// than width that we specified here,
+//* then it will simply fill 100% of the available space (the width of current viewport)
 
-// so in this case, if the viewport is smaller than 114 rem,
-
-// then it will simply fill 100% of the available space
+//*================================================================================================================
 
 //& Title: calc method:
 
-//! width: calc((100% - #{$gutter-horizontal}) / 2); 
- //* Don't forget the spaces before and after the ( - )
+//! width: calc((100% - #{$gutter-horizontal}) / 2);
+//* Don't forget the spaces before and after the ( - )
+
+
+//*================================================================================================================
+
+//& Title: Install Sass compiler and run it:
+
+//~ npm init
+
+//~ npm install node-sass --save-dev
+
+//~ npm install live-server -g: to install live server globallay
+
+//?  --save-dev: to install it as developer dependency in package json folder
+//?  save: specify this package as normal dependency
+
+//*  It means basically that Node SASS is a tool hat we use to develop our project.
+
+//! package.json folder is used to reproduce node modules file when we deleted to share the project or move to another place 
+//! by applying command: npm install 
+
+//? "scripts": {
+//?    "compile:sass":"node-sass sass/main.scss css/style.css -w" 
+//? },
+
+//*  "compile:sass":"node-sass sass/main.scss css/style.css -w"   ===  "compile:sass":"used package input file output compiled file -w"
+
+//* -w: to keep watching for any modification in main sass file and compiled sass to css automatically
+
+
+//* you should be in the directory that contains your package.json file when you run npm run compile:sass. 
+//* This is because npm run scripts are defined in your package.json file, and npm needs to be able to find this file to know what scripts are available.
+
+//? For example:
+//* If your package.json file is located in the 04 Layout directory, then you should change your directory to 04 Layout before running the command:
+
+//* cd "c:/1Programming/Advanced CSS and SASS/My Practice/04 Layout"
+//* Please note that in Windows, you should use forward slashes / instead of backslashes \ when navigating directories in Git Bash.
+
+//~ npm run compile:sass
+
+
+
+//*===============================================================================================================
+
+//& Title: IMPLEMENTING THE 7-1 CSS ARCHITECTURE WITH SASS
+
+
+//? create base folder:
+//* our basic project definitions. Like a project boiler plate.
+
+//~ mkdir base
+
+//~ mkdir folder1 folder2 folder3
+
+
+//! includes:
+
+//! 1) Base file
+//* resets and styles for the HTML and body element selectors.
+//* Note this file should be a partial so we can later import it into the main SASS file.
+//* partial files starts with  undeersore _
+
+//~ echo. > _base.scss
+
+//* name of the partial file:  _base.scss
+//* import partial file by writing in main.scss this: @import "base/base"; 
+
+//? animations:
+//? typography:
+//? utilities:
+
+//* to create multiple files in the current directory
+//~ echo. > _utilities.scss  && echo. > _typography.scss && echo. > _utilities.scss
+//~ or:
+//~ type nul > _typography.scss && type nul > _utilities.scss
+
+
+//! 2) abstracts:
+//* In this folder includes code output any css suchs as variables, mixins, functions
+
+//! 3) components:
+//* components are our independent reusable building blocks that are held together by layout of the page
+
+//! 4) Layout
+
+//! 5) pages:
+//* contains very specific style that applied to a specific page like the landing page
+//* that usually had styles that only applied on it
+//* _home.scss
+
+//! 6) themes:
+
+//! 7) vendor:
+//* folder where you can put third party css which includes icon system, scss file of bootstrap, animation framework.
+
+
+
+
+
+//*================================================================================================================
+
+
+//& Title: Nesting in Sass:
+
+//* li {
+
+//*   display: inline-block;
+//*   margin-left: 30px;
+//*   &:first-child {  
+//*     margin-left: 0;
+//*   }
+
+//* }
+
+
+//? & used when the selector will be repeated inside its selector while nesting
+
+//* li {
+
+//* li:first-child {
+    //*     margin-left: 0;
+//* }
+
+//*}
+
+//? so replace li by & instead of write li again as above
+
+//* 
+
+//*================================================================================================================
+
+//& Title: nesting application in hover:
+
+/*
+* .btn-main {
+
+  &:link {
+*    background-color: $color-secondary;
+*    transition: all 0.4s;
+*  }
+
+  &:hover {
+*    background-color: darken($color-secondary, 15%);
+*  }
+*}
+
+*/
+
+//*================================================================================================================
+
+
+//& Title:Mixin in Sass:
+
+//* mixin make a copy of repeated reusable declarations to be used in different unrelated selectors
+
+//* to declare mixin:
+
+//*  @mixin nameofmixin{}
+//*  to call mixin: include@
+
+
+//? Declare mixin examples:
+/*
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ ~ mixin with argument
+
+@mixin style-text-link($color) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+}
+
+*/
+
+/*
+
+nav {
+ *  @include flex;
+}
+
+.navigation {
+  
+  li {
+  
+    a:link {
+*    @include style-text-link($color-text-light);
+    }
+  }
+}
+
+.btn-main:link{
+*     @include style-text-link($color-text-dark);
+  
+}*
+
+*/
+
+//*================================================================================================================
+
+//& Title:functions in Sass:
+
+/*
+
+* @function divide($a, $s) {
+*  @return $a/$s;
+* }
+
+* nav {
+*  margin: divide(60, 2) * 1px;
+*}
+
+*/
+
+
+//*================================================================================================================
+
+//& Title:Extends in Sass:
+
+
+//* you should only ever use extends  if the rules that we're extending
+
+//* are inherently and thematically related.
+
+//* That's the case with these buttons They are really related.
+
+
+//! Difference between extend and mixin
+//* mixin make a copy of repeated reusable declarations to be used in different unrelated selectors
+
+//* but, extends a copy of repeated reusable declarations to be used in related selectors
+
+
+/*
+
+%btn-placeholder {
+  @include style-text-link($color-text-dark);
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 100px;
+  width: $width-button;
+}
+
+.btn-main {
+
+  &:link {
+*    @extend %btn-placeholder;
+    background-color: $color-secondary;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    background-color: darken($color-secondary, 15%);
+  }
+}
+
+.btn-hot {
+ 
+  &:link {
+*    @extend %btn-placeholder;
+    background-color: $color-tertiary;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    background-color: lighten($color-tertiary, 15%);
+  }
+}
+
+*/
+
+
+//* extend call like here:   @extend %btn-placeholder; copy the above selector (&:link === .btn-main:link) to the extend declaration 
+
+//? extend declaration
+/*
+%btn-placeholder {
+  @include style-text-link($color-text-dark);
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 100px;
+  width: $width-button;
+}
+*/
+
+
+//*======================================================================================================
