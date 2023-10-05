@@ -7,9 +7,9 @@
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 10rem;
-    color: #777;
     margin-top: 5rem;
     transition: all 0.4s;
+    font-size: 1.5rem;
   }
 
   &:hover {
@@ -27,9 +27,18 @@
   }
 
   &--white {
-    background-color: #fff;
+    background-color: $color-white;
+    color: $color-grey-dark;
     &::after {
-      background-color: #fff;
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary;
     }
   }
 
