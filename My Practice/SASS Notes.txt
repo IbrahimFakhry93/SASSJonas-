@@ -8,4 +8,34 @@ npm install node-sass --save-dev
     "compile:sass":"node-sass sass/main.scss css/style.css -w"
   },
 
+cd "c:/1Programming/Advanced CSS and SASS/My Practice/04 Layout"
+
+Please note that in Windows, you should use forward slashes / instead of backslashes \ when navigating directories in Git Bash.
+
+you should be in the directory that contains your package.json file when you run npm run compile:sass. This is because npm run scripts are defined in your package.json file, and npm needs to be able to find this file to know what scripts are available.
+
+If your package.json file is located in the 04 Layout directory, then you should change your directory to 04 Layout before running the command:
+
 npm run compile:sass
+
+If the terminal doesn’t return to the command prompt after you run this command, it means that node-sass is still running in watch mode. It’s waiting for changes to your Sass file, and it will recompile your CSS every time it detects a change12.
+
+If you want to stop node-sass from watching your file, you can press Ctrl + C in your terminal12. This will stop the process and return you to the command prompt. 
+
+
+
+
+{
+  "name": "03-natours-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
